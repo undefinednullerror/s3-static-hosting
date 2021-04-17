@@ -21,7 +21,7 @@ Youtube tutorial: [How to serve a static website hosted on AWS S3 bucket and AWS
     ]
 }
 ````
-4. upload your files in the bucket (no nested folders should be created)  
+4. upload your files in the bucket  
 5. once you are within your bucket -> `Properties` -> `Static website hosting` -> `Edit` -> enable `Static website hosting`  
 6. for `Index document` specify `index.html`  
 7. for `Redirection rules` add the following rules: 
