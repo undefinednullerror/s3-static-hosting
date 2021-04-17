@@ -6,10 +6,25 @@ Youtube tutorial: [How to serve a static website hosted on AWS S3 bucket and AWS
 1. make sure the `Block Public Access settings for this account` in AWS has all the checkboxes cleared/deselected 
 2. create a new `S3` bucket 
 3. once you are within your bucket -> `Permissions` -> `Block public access (bucket settings)` clear all checkboxes 
-4. upload your files in the bucket (no nested folders should be created) 
-5. once you are within your bucket -> `Properties` -> `Static website hosting` -> `Edit` -> enable `Static website hosting` 
-6. for `Index document` specify `index.html` 
-7. for `Redirection rules` add the following rules:
+4. under `Permissions` -> edit `Bucket policy` and use this policy to grant public read access for your website: 
+````json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+        }
+    ]
+}
+````
+4. upload your files in the bucket (no nested folders should be created)  
+5. once you are within your bucket -> `Properties` -> `Static website hosting` -> `Edit` -> enable `Static website hosting`  
+6. for `Index document` specify `index.html`  
+7. for `Redirection rules` add the following rules: 
 ```json
 [
     {
