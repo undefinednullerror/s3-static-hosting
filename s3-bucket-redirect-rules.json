@@ -1,0 +1,22 @@
+[
+  {
+    "Condition": {
+      "HttpErrorCodeReturnedEquals": "403"
+    },
+    "Redirect": {
+      "HostName": "aws.md.md",
+      "Protocol": "https",
+      "ReplaceKeyPrefixWith": "#!/"
+    }
+  },
+  {
+    "Condition": {
+      "HttpErrorCodeReturnedEquals": "404"
+    },
+    "Redirect": {
+      "HostName": "aws.md.md",
+      "Protocol": "https",
+      "ReplaceKeyPrefixWith": "#!/"
+    }
+  }
+]
