@@ -1,6 +1,6 @@
 # Use AWS S3 bucket as a static website hosting
   
-Youtube tutorial: [How to serve a static website hosted on AWS S3 bucket and AWS CloudFront with custom domain name](https://www.youtube.com/channel/UCd2btbWoByFedOolTMsRSCA)  
+Youtube tutorial: [How to serve a static website hosted on AWS S3 bucket and AWS CloudFront with custom domain name](https://www.youtube.com/watch?v=yHfcARlEemA)  
   
 ## Configure S3 bucket  
 1. make sure the `Block Public Access settings for this account` in AWS has all the checkboxes cleared/deselected 
